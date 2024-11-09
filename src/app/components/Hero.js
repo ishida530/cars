@@ -7,7 +7,6 @@ import { useContext } from 'react'
 import { motion, easeInOut } from 'framer-motion'
 import { fadeIn } from "./variants"
 
-
 const Hero = () => {
 
     const { searchActive } = useContext(SearchContext)
@@ -23,10 +22,8 @@ const Hero = () => {
                             initial="hidden"
                             whileInView={"show"}
                             viewport={{ once: false, amount: 0.6 }}
-
-                            className='h1'
-                        >
-                            Explore the Finest <span className='text-accent'>Global</span> Offers{' '}
+                            className='h1'>
+                            Sell Your Car <span className='text-accent'>Fast</span> and <span className='text-accent'>Easy</span>
                         </motion.h1>
                         <motion.p
                             variants={fadeIn('down', 0.4)}
@@ -34,7 +31,7 @@ const Hero = () => {
                             whileInView={"show"}
                             viewport={{ once: false, amount: 0.6 }}
                             className="description max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10">
-                            Find your ideal ride for any adventure with our diverse range of affrodabe and dependale car rentals
+                            Get a free, no-obligation offer for your car today! We buy all types of cars, regardless of condition.
                         </motion.p>
                         <motion.div
                             variants={fadeIn('down', 0.6)}
@@ -44,11 +41,11 @@ const Hero = () => {
                             className="flex gap-x-3 justify-center xl:justify-start ">
 
                             <button className="btn-cta">
-                                <Image src={'/icons/buttons/app-store.svg'} width={132} height={36} alt="" />
+                                <Image src={'/icons/buttons/app-store.svg'} width={132} height={36} alt="Download App" />
                             </button>
                             <button className="btn-cta">
-                                <Image src={'/icons/buttons/google-play.svg'} width={132} height={36} alt="" />
-                            </button>                       \
+                                <Image src={'/icons/buttons/google-play.svg'} width={132} height={36} alt="Download App" />
+                            </button>
                         </motion.div>
                         <motion.div
                             variants={fadeIn('up', 0.6)}
@@ -56,7 +53,7 @@ const Hero = () => {
                             whileInView={"show"}
                             viewport={{ once: false, amount: 0.6 }}
                             className="relative w-full h-full max-w-[50vh] md:max-w-[70vw] xl:max-w-[860px xl:max-h-[542px] xl:absolute xl:-right-[100px] min-[1680px] :right=[120px] xl:top-48">
-                            <Image src={'/images/hero/car.svg'} fill alt="" style={{ objectFit: 'contain' }} />
+                            <Image src={'/images/hero/car.svg'} fill alt="Sell Your Car" style={{ objectFit: 'contain' }} />
                         </motion.div>
                     </div>
                 </div>
@@ -67,7 +64,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ y: '-100%' }}
                         animate={{ y: 0 }}
-                        transition={{ easy: easeInOut }}
+                        transition={{ ease: easeInOut }}
                         className="fixed top-[80px] z-10 w-full max-w-[1920px]">
                         <Search />
                     </motion.div>
