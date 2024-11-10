@@ -119,7 +119,6 @@ const Header = () => {
                     >
                         Zobacz wszystkie auta
                     </Link>
-                    <SearchMobile />
                 </nav>
             </div>
         </header>
