@@ -13,8 +13,7 @@ const Hero = () => {
 
     return (
         <section className="section h-screen xl:h-[90vh] bg-[#b2b7c2]/10" id='home'>
-            <div className="container mx-auto h-full xl:pt-10">
-
+            <div className="container mx-auto h-full ">
                 <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full">
                     <div className="text-center xl:max-w-xl xl:text-left mt-16 xl:mt-0 ">
                         <motion.h1
@@ -22,8 +21,8 @@ const Hero = () => {
                             initial="hidden"
                             whileInView={"show"}
                             viewport={{ once: false, amount: 0.6 }}
-                            className='h1'>
-                            Sell Your Car <span className='text-accent'>Fast</span> and <span className='text-accent'>Easy</span>
+                            className='h1 '>
+                            Witaj w <strong className="text-accent">A</strong>&<strong className="text-accent">M</strong> Cars - Twoim <strong className="text-accent">zaufanym</strong> partnerze w sprzedaży samochodów!
                         </motion.h1>
                         <motion.p
                             variants={fadeIn('down', 0.4)}
@@ -31,29 +30,15 @@ const Hero = () => {
                             whileInView={"show"}
                             viewport={{ once: false, amount: 0.6 }}
                             className="description max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10">
-                            Get a free, no-obligation offer for your car today! We buy all types of cars, regardless of condition.
+                            Sprzedaż samochodu z nami jest szybka, prosta i korzystna. Gwarantujemy uczciwą wycenę, przejrzysty proces i konkurencyjne ceny - bez względu na stan pojazdu. Zaufaj profesjonalistom i sprzedaj swój samochód bez problemu
                         </motion.p>
-                        <motion.div
-                            variants={fadeIn('down', 0.6)}
-                            initial="hidden"
-                            whileInView={"show"}
-                            viewport={{ once: false, amount: 0.8 }}
-                            className="flex gap-x-3 justify-center xl:justify-start ">
-
-                            <button className="btn-cta">
-                                <Image src={'/icons/buttons/app-store.svg'} width={132} height={36} alt="Download App" />
-                            </button>
-                            <button className="btn-cta">
-                                <Image src={'/icons/buttons/google-play.svg'} width={132} height={36} alt="Download App" />
-                            </button>
-                        </motion.div>
                         <motion.div
                             variants={fadeIn('up', 0.6)}
                             initial="hidden"
                             whileInView={"show"}
                             viewport={{ once: false, amount: 0.6 }}
-                            className="relative w-full h-full max-w-[50vh] md:max-w-[70vw] xl:max-w-[860px xl:max-h-[542px] xl:absolute xl:-right-[100px] min-[1680px] :right=[120px] xl:top-48">
-                            <Image src={'/images/hero/car.svg'} fill alt="Sell Your Car" style={{ objectFit: 'contain' }} />
+                            className="relative w-full h-full max-w-[50vh] md:max-w-[70vw] xl:max-w-[660px] xl:max-h-[542px] xl:absolute xl:-right-[-100px] xl:top-48 overflow-hidden ">
+                            <Image src={'/images/hero/car.svg'} fill alt="Sprzedaj swój samochód" style={{ objectFit: 'contain' }} />
                         </motion.div>
                     </div>
                 </div>

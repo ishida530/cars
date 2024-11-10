@@ -12,20 +12,20 @@ const Cta = () => {
             <div className="container mx-auto">
                 <div className="flex flex-col md:flex-row xl:items-center ">
                     <div className="flex-1 xl:ml-24 text-center md:text-left mb-12  md:mb-0" >
-                        <div className="max-w-[520px] mx-auto order-2 xl:order-none ">
+                        <div className="max-w-[620px] mx-auto order-2 xl:order-none ">
                             <motion.h2
                                 variants={fadeIn('right', 0.2)}
                                 initial="hidden"
                                 whileInView={"show"}
                                 viewport={{ once: false, amount: 0.6 }}
-                                className="h2">Download our App now and hit the road with easy </motion.h2>
+                                className="h2">Nie zwlekaj dłużej - dołącz do grona zadowolonych klientów A&M Cars i skorzystaj z naszej profesjonalnej obsługi w handlu samochodami już dziś!  </motion.h2>
                             <motion.p
                                 variants={fadeIn('right', 0.4)}
                                 initial="hidden"
                                 whileInView={"show"}
                                 viewport={{ once: false, amount: 0.6 }}
                                 className="mb-10"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque est, dolore expedita nulla animi ab nihil beatae error temporibus veritatis.</motion.p>
+                            >Skontaktuj się z nami, aby umówić się na spotkanie lub dowiedzieć się więcej. Jesteśmy dostępni 24h, 7 dni w tygodniu (dni wolne i święta również).</motion.p>
                             <motion.div
                                 variants={fadeIn('right', 0.6)}
                                 initial="hidden"

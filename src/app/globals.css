@@ -30,6 +30,7 @@
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   background-color: #f13024;
+
 }
 
 @layer base {
@@ -42,7 +43,7 @@
   }
 
   .h1 {
-    @apply text-4xl xl:text-[64px] text-primary xl:leading-[72px] font-extrabold mb-[18px]
+    @apply text-4xl xl:text-[54px] text-primary xl:leading-[72px] font-extrabold mb-[18px]
   }
 
   .h2 {
@@ -86,7 +87,7 @@
   }
 
   .btn-accent {
-    @apply bg-accent hover:bg-accent-hover;
+    @apply bg-black hover:bg-accent-hover;
   }
 
   .active {

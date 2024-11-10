@@ -1,59 +1,52 @@
 'use client'
 import { useContext, useEffect, useState } from "react";
 import Image from 'next/image';
-
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-scroll";
-import { BiMenuAltRight, BiX, Bix } from 'react-icons/bi'
+import { BiMenuAltRight, BiX } from 'react-icons/bi';
 import { SearchContext } from "../context/search";
 import SearchMobile from "./SearchMobile";
+
 const Header = () => {
-    const { setSearchActive } = useContext(SearchContext)
+    const { setSearchActive } = useContext(SearchContext);
     const [header, setHeader] = useState(false);
-    const [nav, setNav] = useState(false)
+    const [nav, setNav] = useState(false);
 
     const desktopMode = useMediaQuery({
         query: '(min-width: 1300px)',
-    })
+    });
 
     useEffect(() => {
         const handlerScroll = () => {
             if (window.scrollY > 40) {
-                setHeader(true)
+                setHeader(true);
             } else {
-                setHeader(false)
-
+                setHeader(false);
             }
 
             if (window.scrollY > 800) {
-                setSearchActive(true)
+                setSearchActive(true);
             } else {
-                setSearchActive(false)
+                setSearchActive(false);
             }
-        }
-        window.addEventListener('scroll', handlerScroll)
+        };
+        window.addEventListener('scroll', handlerScroll);
         return () => {
-            window.removeEventListener('scroll', handlerScroll)
-        }
+            window.removeEventListener('scroll', handlerScroll);
+        };
+    });
 
-    })
-    console.log(header)
     return (
         <header className={`${header ? 'bg-white shadow-md py-2' : ' bg-transparent shadow-none py-4'} fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300`}>
-
             <div className="xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between">
-
-
                 <div className="flex justify-between items-center px-4">
-
-
                     <Link
                         to='home'
                         smooth={desktopMode}
                         spy={true}
                         className="cursor-pointer"
                     >
-                        <Image src={'/icons/logo.svg'} width={194} height={64} alt="" />
+                        <Image className="rounded-2xl" src={'/icons/logo.png'} width={144} height={50} alt="Logo firmy" />
                     </Link>
                     <div
                         onClick={() => setNav(!nav)}
@@ -63,9 +56,7 @@ const Header = () => {
                             <BiX />
                         ) : (
                             < BiMenuAltRight className="text-4xl" />
-                        )
-
-                        }
+                        )}
                     </div>
                 </div>
 
@@ -78,7 +69,7 @@ const Header = () => {
                         spy={true}
                         className="cursor-pointer"
                     >
-                        Home
+                        Strona główna
                     </Link>
                     <Link
                         to='cars'
@@ -86,7 +77,7 @@ const Header = () => {
                         spy={true}
                         className="cursor-pointer"
                     >
-                        Cars
+                        Samochody
                     </Link>
                     <Link
                         to='about'
@@ -94,7 +85,7 @@ const Header = () => {
                         spy={true}
                         className="cursor-pointer"
                     >
-                        About
+                        O nas
                     </Link>
                     <Link
                         to='why'
@@ -102,7 +93,7 @@ const Header = () => {
                         spy={true}
                         className="cursor-pointer"
                     >
-                        Why
+                        Dlaczego my
                     </Link>
                     <Link
                         to='testimonial'
@@ -110,7 +101,7 @@ const Header = () => {
                         spy={true}
                         className="cursor-pointer"
                     >
-                        Testimonials
+                        Opinie
                     </Link>
                     <Link
                         to='contact'
@@ -118,7 +109,7 @@ const Header = () => {
                         spy={true}
                         className="cursor-pointer"
                     >
-                        Contact
+                        Kontakt
                     </Link>
                     <Link
                         to='/'
@@ -126,15 +117,13 @@ const Header = () => {
                         spy={true}
                         className="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto"
                     >
-                        See all cars
+                        Zobacz wszystkie auta
                     </Link>
                     <SearchMobile />
                 </nav>
-
-
             </div>
-        </header >
-    )
+        </header>
+    );
 }
 
-export default Header
+export default Header;

@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image"
-import { MdOutlineMapsHomeWork, MdOutlineBuildCircle, MdOutlineDirectionsCar } from 'react-icons/md'
+import { MdOutlineAttachMoney, MdOutlineHandshake, MdOutlineSpeed } from 'react-icons/md'
 import CountUp from "react-countup"
 import { useInView } from 'react-intersection-observer'
 
@@ -37,14 +37,13 @@ const About = () => {
                                 initial="hidden"
                                 whileInView={"show"}
                                 viewport={{ once: false, amount: 0.6 }}
-                                className="h2">Car services simplified.</motion.h2>
+                                className="h2">Sprzedaż samochodu? Zaufaj nam.</motion.h2>
                             <motion.p
                                 variants={fadeIn('up', 0.6)}
                                 initial="hidden"
                                 whileInView={"show"}
                                 viewport={{ once: false, amount: 0.6 }}
-
-                                className="mb-[42px] max-w-md">Rent, choose, and repair with ease. Out covenient location, diverse car types, and reliable repair  points ensure a seamless car experience</motion.p>
+                                className="mb-[42px] max-w-md">Z nami sprzedaż samochodu staje się szybka, transparentna i opłacalna. Oferujemy najlepsze warunki, błyskawiczne transakcje i pełną uczciwość na każdym etapie.</motion.p>
                             <motion.div
                                 variants={fadeIn('up', 0.8)}
                                 initial="hidden"
@@ -52,39 +51,39 @@ const About = () => {
                                 viewport={{ once: false, amount: 0.2 }}
                                 className="flex items-center gap-x-8 mb-12">
                                 <div className="flex flex-col w-[100px] ">
-                                    <MdOutlineDirectionsCar className="text-5xl text-accent" />
+                                    <MdOutlineAttachMoney className="text-5xl text-accent" />
                                     <div className="text-3xl font-black mb-2">
                                         {inView
-                                            ? <CountUp start="0" end={50} duration={3} delay={1} />
+                                            ? <CountUp start="0" end={247} duration={3} delay={1} />
                                             : null}
                                         +
                                     </div>
                                     <div className="uppercase text-[13px] font-semibold text-secondary">
-                                        car <br /> types
+                                        Zadowolonych <br /> klientów
                                     </div>
                                 </div>
                                 <div className="flex flex-col w-[100px] ">
-                                    <MdOutlineMapsHomeWork className="text-5xl text-accent" />
+                                    <MdOutlineHandshake className="text-5xl text-accent" />
                                     <div className="text-3xl font-black mb-2">
                                         {inView
-                                            ? <CountUp start="0" end={135} duration={3} delay={1} />
+                                            ? <CountUp start="0" end={100} duration={3} delay={1} />
                                             : null}
-                                        +
+                                        %
                                     </div>
                                     <div className="uppercase text-[13px] font-semibold text-secondary">
-                                        Rental <br /> outlets
+                                        Uczciwe <br /> transakcje
                                     </div>
                                 </div>
                                 <div className="flex flex-col w-[100px] ">
-                                    <MdOutlineBuildCircle className="text-5xl text-accent" />
+                                    <MdOutlineSpeed className="text-5xl text-accent" />
                                     <div className="text-3xl font-black mb-2">
                                         {inView
-                                            ? <CountUp start="0" end={35} duration={3} delay={1} />
+                                            ? <CountUp start="0" end={24} duration={3} delay={1} />
                                             : null}
-                                        +
+                                        h
                                     </div>
                                     <div className="uppercase text-[13px] font-semibold text-secondary">
-                                        repait <br /> points
+                                        Szybka <br /> wycena
                                     </div>
                                 </div>
                             </motion.div>
@@ -94,7 +93,7 @@ const About = () => {
                                 whileInView={"show"}
                                 viewport={{ once: false, amount: 0.6 }}
                                 className="hidden xl:block bg-accent hover:bg-accent-hover rounded-[10px] w-full 
-                                h-16 uppercase font-medium text-white tracking-[2px] text-[13px] max-w-[184px]">See all cars</motion.button>
+                                h-16 uppercase font-medium text-white tracking-[2px] text-[13px] max-w-[224px]">Dowiedz się więcej</motion.button>
                         </div>
                     </div>
                 </div>
