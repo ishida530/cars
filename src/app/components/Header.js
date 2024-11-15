@@ -55,7 +55,7 @@ const Header = () => {
                             <Image className="rounded-2xl" src={'/icons/logo.png'} width={144} height={50} alt="Logo firmy" />
                         </Link>
                         <h1 className="h1 flex text-center align-middle m-0 ">
-                            <div className="m-auto">24/7</div>
+                            <div className="m-auto">24h/7</div>
                         </h1>
                     </div>
                     <div

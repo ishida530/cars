@@ -6,7 +6,7 @@ import { ModalProvider } from "./context/modal";
 const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: "AM Cars",
-  description: "Skup samochodów 24/7",
+  description: "Skup samochodów 24h/7",
 };
 
 export default function RootLayout({ children }) {
