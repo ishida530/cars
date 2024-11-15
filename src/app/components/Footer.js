@@ -22,7 +22,7 @@ const Footer = () => {
                         <Link
                             to={'home'}
                             smooth={true}
-                            spy={true}
+                            spy="true"
                             className="cursor-pointer"
                         >
                             <Image src={"/icons/logo.png"} width={200} height={200} alt="Company Logo" />

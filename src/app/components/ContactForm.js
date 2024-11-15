@@ -19,23 +19,31 @@ const ContactForm = ({ isOpen, closeModal }) => {
     productionYear: '',
     fuelType: '',
     carType: '',
-    message: ''
+    message: '',
+    files: [],  // Changed to an array to store multiple files
   });
 
   // Handle change for form fields
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    const { name, value, type, files } = e.target;
+    if (type === 'file') {
+      setFormData({
+        ...formData,
+        [name]: Array.from(files),  // Convert file list to an array
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted with data:', formData);
     closeModal();  // Close modal after form submission
-    // Add additional logic to send the form data if necessary
+    // Add additional logic to send the form data if necessary (including the files)
   };
 
   return (
@@ -53,12 +61,13 @@ const ContactForm = ({ isOpen, closeModal }) => {
             Wypełnij formularz, aby skontaktować się z nami.
           </DialogDescription>
         </DialogHeader>
-        
+
         {/* Form starts here */}
-        <form 
+        <form
           action="send_email.php"  // Set the action to send email data to the server
           method="POST"           // Define the method as POST
           id="contact-form"
+          encType="multipart/form-data"  // Important for file upload
           onSubmit={handleSubmit}  // Handle submit in React (could be customized as needed)
         >
           <div className="mb-4">
@@ -184,6 +193,28 @@ const ContactForm = ({ isOpen, closeModal }) => {
                 <SelectItem value="Inny">Inny</SelectItem>
               </SelectContent>
             </Select>
+          </div>
+          {/* File Upload */}
+          <div className="mb-4">
+            <Input
+              type="file"
+              name="files"
+              onChange={handleChange}
+              accept=".jpg,.jpeg,.png,.pdf,.docx" // You can specify allowed file types
+              multiple  // This allows multiple file selection
+              label="Załącz pliki"
+            />
+            {/* Displaying selected files */}
+            {formData.files.length > 0 && (
+              <div className="mt-2">
+                <h4>Wybrane pliki:</h4>
+                <ul>
+                  {formData.files.map((file, index) => (
+                    <li key={index}>{file.name}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
           <div className="mb-4">
             <Textarea

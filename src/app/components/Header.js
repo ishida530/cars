@@ -49,7 +49,7 @@ const Header = () => {
                         <Link
                             to='home'
                             smooth={desktopMode}
-                            spy={true}
+                            spy="true"
                             className="cursor-pointer"
                         >
                             <Image className="rounded-2xl" src={'/icons/logo.png'} width={144} height={50} alt="Logo firmy" />
@@ -76,7 +76,7 @@ const Header = () => {
                     <Link
                         to='home'
                         smooth={desktopMode}
-                        spy={true}
+                        spy="true"
                         className="cursor-pointer"
                     >
                         Strona główna
@@ -84,7 +84,7 @@ const Header = () => {
                     <Link
                         to='cars'
                         smooth={desktopMode}
-                        spy={true}
+                        spy="true"
                         className="cursor-pointer"
                     >
                         Samochody
@@ -92,7 +92,7 @@ const Header = () => {
                     <Link
                         to='about'
                         smooth={desktopMode}
-                        spy={true}
+                        spy="true"
                         className="cursor-pointer"
                     >
                         O nas
@@ -100,7 +100,7 @@ const Header = () => {
                     <Link
                         to='why'
                         smooth={desktopMode}
-                        spy={true}
+                        spy="true"
                         className="cursor-pointer"
                     >
                         Dlaczego my
@@ -108,7 +108,7 @@ const Header = () => {
                     <Link
                         to='testimonial'
                         smooth={desktopMode}
-                        spy={true}
+                        spy="true"
                         className="cursor-pointer"
                     >
                         Opinie
@@ -116,13 +116,13 @@ const Header = () => {
                     <Link
                         to='contact'
                         smooth={desktopMode}
-                        spy={true}
+                        spy="true"
                         className="cursor-pointer"
                     >
                         Kontakt
                     </Link>
                     <Button
-                        spy={true}
+                        spy="true"
                         className="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto"
                         onClick={openModal}
                     >
