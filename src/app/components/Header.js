@@ -8,16 +8,17 @@ import { SearchContext } from "../context/search";
 import SearchMobile from "./SearchMobile";
 import { useModal } from "../context/modal";
 import ContactForm from "./ContactForm";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
     const { setSearchActive } = useContext(SearchContext);
     const [header, setHeader] = useState(false);
     const [nav, setNav] = useState(false);
-
+    const { openModal } = useModal();
     const desktopMode = useMediaQuery({
         query: '(min-width: 1300px)',
     });
-    const {isOpen, closeModal} = useModal()
+    const { isOpen, closeModal } = useModal()
 
     useEffect(() => {
         const handlerScroll = () => {
@@ -120,7 +121,13 @@ const Header = () => {
                     >
                         Kontakt
                     </Link>
-
+                    <Button
+                        spy={true}
+                        className="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto"
+                        onClick={openModal}
+                    >
+                        Wyceń auto
+                    </Button>
                 </nav>
             </div>
 

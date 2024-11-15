@@ -7,8 +7,9 @@ import { useInView } from 'react-intersection-observer'
 
 import { fadeIn } from "./variants"
 import { motion } from "framer-motion"
+import { useModal } from "../context/modal"
 const About = () => {
-
+    const { openModal } = useModal();
     const [ref, inView] = useInView({
         threshold: 0.5
     })
@@ -92,6 +93,7 @@ const About = () => {
                                 initial="hidden"
                                 whileInView={"show"}
                                 viewport={{ once: false, amount: 0.6 }}
+                                onClick={openModal}
                                 className="hidden xl:block bg-accent hover:bg-accent-hover rounded-[10px] w-full 
                                 h-16 uppercase font-medium text-white tracking-[2px] text-[13px] max-w-[224px]">Dowiedz się więcej</motion.button>
                         </div>
