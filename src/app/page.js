@@ -1,6 +1,7 @@
 import About from "./components/About";
 import BackToTopBtn from "./components/BackToTopBtn";
 import Cars from "./components/Cars";
+import ContactForm from "./components/ContactForm";
 import Cta from "./components/Cta";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -10,19 +11,17 @@ import Why from "./components/Why";
 
 export default function Home() {
   return (
-    <main className="max-w-[1920px] bg-white mx-auto realtive overflow-hidden">
+    <main className="max-w-[1920px] bg-white mx-auto relative overflow-hidden">
       <Header />
       <Hero />
-      <Cars />
-
-
+      {/* <Cars /> */}
       <About />
       <Why />
       <Testimonial />
       <Cta />
       <Footer />
       <BackToTopBtn />
+      {/* Conditionally render ContactForm based on modal state */}
     </main>
-
   );
 }

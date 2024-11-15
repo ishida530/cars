@@ -93,4 +93,7 @@
   .active {
     @apply text-accent;
   }
+  :root {
+    --radius: 0.5rem;
+  }
 }

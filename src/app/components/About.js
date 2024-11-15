@@ -37,13 +37,13 @@ const About = () => {
                                 initial="hidden"
                                 whileInView={"show"}
                                 viewport={{ once: false, amount: 0.6 }}
-                                className="h2">Sprzedaż samochodu? Zaufaj nam.</motion.h2>
+                                className="h2">Sprzedajesz auto?</motion.h2>
                             <motion.p
                                 variants={fadeIn('up', 0.6)}
                                 initial="hidden"
                                 whileInView={"show"}
                                 viewport={{ once: false, amount: 0.6 }}
-                                className="mb-[42px] max-w-md">Z nami sprzedaż samochodu staje się szybka, transparentna i opłacalna. Oferujemy najlepsze warunki, błyskawiczne transakcje i pełną uczciwość na każdym etapie.</motion.p>
+                                className="mb-[42px] max-w-md">Skontaktuj się z nami już dziś!</motion.p>
                             <motion.div
                                 variants={fadeIn('up', 0.8)}
                                 initial="hidden"

@@ -14,7 +14,7 @@ const Why = () => {
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.6 }}
                     className="h2 text-center">
-                    Dlaczego warto wybrać <stron className="text-accent">A</stron>&<stron className="text-accent">M</stron> Cars?
+                    Dlaczego warto wybrać <strong className="text-accent">A</strong>&<strong className="text-accent">M</strong> Cars?
                 </motion.h2>
                 <motion.p
                     variants={fadeIn('down', 0.4)}

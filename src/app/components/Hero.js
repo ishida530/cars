@@ -22,7 +22,7 @@ const Hero = () => {
                             whileInView={"show"}
                             viewport={{ once: false, amount: 0.6 }}
                             className='h1 '>
-                            Witaj w <strong className="text-accent">A</strong>&<strong className="text-accent">M</strong> Cars - Twoim <strong className="text-accent">zaufanym</strong> partnerze w sprzedaży samochodów!
+                            Witaj w <strong className="text-accent">A</strong>&<strong className="text-accent">M</strong> Cars -
                         </motion.h1>
                         <motion.p
                             variants={fadeIn('down', 0.4)}
@@ -30,7 +30,9 @@ const Hero = () => {
                             whileInView={"show"}
                             viewport={{ once: false, amount: 0.6 }}
                             className="description max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10">
-                            Sprzedaż samochodu z nami jest szybka, prosta i korzystna. Gwarantujemy uczciwą wycenę, przejrzysty proces i konkurencyjne ceny - bez względu na stan pojazdu. Zaufaj profesjonalistom i sprzedaj swój samochód bez problemu
+                            Skupujemy auta na terenie województwa mazowieckiego!
+                            Gwarantujemy uczciwą i konkurencyjną wycenę. Zapewniamy naszym klientom szybki i
+                            profesjonalny proces korzystny dla obu stron.
                         </motion.p>
                         <motion.div
                             variants={fadeIn('up', 0.6)}

@@ -6,6 +6,8 @@ import { Link } from "react-scroll";
 import { BiMenuAltRight, BiX } from 'react-icons/bi';
 import { SearchContext } from "../context/search";
 import SearchMobile from "./SearchMobile";
+import { useModal } from "../context/modal";
+import ContactForm from "./ContactForm";
 
 const Header = () => {
     const { setSearchActive } = useContext(SearchContext);
@@ -15,6 +17,7 @@ const Header = () => {
     const desktopMode = useMediaQuery({
         query: '(min-width: 1300px)',
     });
+    const {isOpen, closeModal} = useModal()
 
     useEffect(() => {
         const handlerScroll = () => {
@@ -40,14 +43,20 @@ const Header = () => {
         <header className={`${header ? 'bg-white shadow-md py-2' : ' bg-transparent shadow-none py-4'} fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300`}>
             <div className="xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between">
                 <div className="flex justify-between items-center px-4">
-                    <Link
-                        to='home'
-                        smooth={desktopMode}
-                        spy={true}
-                        className="cursor-pointer"
-                    >
-                        <Image className="rounded-2xl" src={'/icons/logo.png'} width={144} height={50} alt="Logo firmy" />
-                    </Link>
+                    <div className="flex gap-4">
+
+                        <Link
+                            to='home'
+                            smooth={desktopMode}
+                            spy={true}
+                            className="cursor-pointer"
+                        >
+                            <Image className="rounded-2xl" src={'/icons/logo.png'} width={144} height={50} alt="Logo firmy" />
+                        </Link>
+                        <h1 className="h1 flex text-center align-middle m-0 ">
+                            <div className="m-auto">24/7</div>
+                        </h1>
+                    </div>
                     <div
                         onClick={() => setNav(!nav)}
                         className="cursor-pointer xl:hidden"
@@ -111,16 +120,12 @@ const Header = () => {
                     >
                         Kontakt
                     </Link>
-                    <Link
-                        to='/'
-                        smooth={desktopMode}
-                        spy={true}
-                        className="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto"
-                    >
-                        Zobacz wszystkie auta
-                    </Link>
+
                 </nav>
             </div>
+
+            {isOpen && <ContactForm isOpen={isOpen} closeModal={closeModal} />}
+
         </header>
     );
 }

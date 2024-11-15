@@ -26,30 +26,9 @@ const Cta = () => {
                                 viewport={{ once: false, amount: 0.6 }}
                                 className="mb-10"
                             >Skontaktuj się z nami, aby umówić się na spotkanie lub dowiedzieć się więcej. Jesteśmy dostępni 24h, 7 dni w tygodniu (dni wolne i święta również).</motion.p>
-                            <motion.div
-                                variants={fadeIn('right', 0.6)}
-                                initial="hidden"
-                                whileInView={"show"}
-                                viewport={{ once: false, amount: 0.6 }}
-                                className="flex gap-x-3 justify-center md:justify-start">
-                                <button className="btn-cta">
-                                    <Image src="/icons/buttons/google-play.svg" width={132} height={36} alt="" />
-                                </button>
-                                <button className="btn-cta">
-                                    <Image src="/icons/buttons/app-store.svg" width={132} height={36} alt="" />
-                                </button>
-                            </motion.div>
+                          
                         </div>
                     </div>
-                    <motion.div
-                        variants={fadeIn('left', 0.8)}
-                        initial="hidden"
-                        whileInView={"show"}
-                        viewport={{ once: false, amount: 0.2 }}
-                        className="mx-auto"
-                    >
-                        <Image src={'/images/cta/phone.svg'} width={320} height={640} alt="" />
-                    </motion.div>
                 </div>
             </div>
         </div >
