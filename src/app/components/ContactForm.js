@@ -54,7 +54,7 @@ const ContactForm = ({ isOpen, closeModal }) => {
       </DialogTrigger>
 
       {/* Dialog Content */}
-      <DialogContent>
+      <DialogContent className="max-h-[100vh] overflow-y-auto"> {/* Allow scroll within content */}
         <DialogHeader>
           <DialogTitle>Kontakt</DialogTitle>
           <DialogDescription>

@@ -39,17 +39,21 @@ const Header = () => {
         };
     });
 
+    const handleLinkClick = () => {
+        setNav(false);  // Close the menu when a link is clicked
+    };
+
     return (
         <header className={`${header ? 'bg-white shadow-md py-2' : ' bg-transparent shadow-none py-4'} fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300`}>
             <div className="xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between">
                 <div className="flex justify-between items-center px-4">
                     <div className="flex gap-4">
-
                         <Link
                             to='home'
                             smooth={desktopMode}
                             spy="true"
                             className="cursor-pointer"
+                            onClick={handleLinkClick}  // Close the menu on click
                         >
                             <Image className="rounded-2xl" src={'/icons/logo.png'} width={144} height={50} alt="Logo firmy" />
                         </Link>
@@ -71,14 +75,14 @@ const Header = () => {
                     </div>
                 </div>
 
-                <nav className={`${nav ? 'max-h-max py-8 px-4 xl:py-0 xl:px-0' : 'max-h-0 xl:max-h-max'
-                    } 
-                     flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px] xl:normal-case `}>
+                <nav className={`${nav ? 'max-h-max py-8 px-4 xl:py-0 xl:px-0' : 'max-h-0 xl:max-h-max'} 
+                    flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px] xl:normal-case`}>
                     <Link
                         to='home'
                         smooth={desktopMode}
                         spy="true"
                         className="cursor-pointer"
+                        onClick={handleLinkClick}  // Close the menu on click
                     >
                         Strona główna
                     </Link>
@@ -87,6 +91,7 @@ const Header = () => {
                         smooth={desktopMode}
                         spy="true"
                         className="cursor-pointer"
+                        onClick={handleLinkClick}  // Close the menu on click
                     >
                         Samochody
                     </Link>
@@ -95,6 +100,7 @@ const Header = () => {
                         smooth={desktopMode}
                         spy="true"
                         className="cursor-pointer"
+                        onClick={handleLinkClick}  // Close the menu on click
                     >
                         O nas
                     </Link>
@@ -103,6 +109,7 @@ const Header = () => {
                         smooth={desktopMode}
                         spy="true"
                         className="cursor-pointer"
+                        onClick={handleLinkClick}  // Close the menu on click
                     >
                         Dlaczego my
                     </Link>
@@ -111,6 +118,7 @@ const Header = () => {
                         smooth={desktopMode}
                         spy="true"
                         className="cursor-pointer"
+                        onClick={handleLinkClick}  // Close the menu on click
                     >
                         Opinie
                     </Link>
@@ -119,6 +127,7 @@ const Header = () => {
                         smooth={desktopMode}
                         spy="true"
                         className="cursor-pointer"
+                        onClick={handleLinkClick}  // Close the menu on click
                     >
                         Kontakt
                     </Link>
