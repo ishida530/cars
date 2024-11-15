@@ -15,7 +15,7 @@ const Hero = () => {
         <section className="section h-screen xl:h-[90vh] bg-[#b2b7c2]/10" id='home'>
             <div className="container mx-auto h-full ">
                 <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full">
-                    <div className="text-center xl:max-w-xl xl:text-left mt-16 xl:mt-0 ">
+                    <div className="text-center xl:max-w-xl xl:text-left mt-0 md:mt-16 xl:mt-0 ">
                         <motion.h1
                             variants={fadeIn('down', 0.2)}
                             initial="hidden"
@@ -29,11 +29,19 @@ const Hero = () => {
                             initial="hidden"
                             whileInView={"show"}
                             viewport={{ once: false, amount: 0.6 }}
-                            className="description max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10">
+                            className="description max-w-[550px] mx-auto xl:mx-0 md:mb-6 xl:mb-10">
                             Skupujemy auta na terenie województwa mazowieckiego!
                             Gwarantujemy uczciwą i konkurencyjną wycenę. Zapewniamy naszym klientom szybki i
                             profesjonalny proces korzystny dla obu stron.
+                            <a
+
+                                className="btn md:hidden bg-black text-white px-0 py-3 rounded-full shadow-md mt-5  hover:scale-105 hover:bg-accent hover:shadow-lg"
+                                href="tel:+48530200082">
+                                Porozmawiajmy!
+                            </a>
                         </motion.p>
+
+
                         <motion.div
                             variants={fadeIn('up', 0.6)}
                             initial="hidden"
