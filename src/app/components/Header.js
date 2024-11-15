@@ -5,7 +5,6 @@ import { useMediaQuery } from "react-responsive";
 import { Link } from "react-scroll";
 import { BiMenuAltRight, BiX } from 'react-icons/bi';
 import { SearchContext } from "../context/search";
-import SearchMobile from "./SearchMobile";
 import { useModal } from "../context/modal";
 import ContactForm from "./ContactForm";
 import { Button } from "@/components/ui/button";
